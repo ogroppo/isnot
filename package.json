@@ -1,0 +1,23 @@
+{
+  "name": "isitnot",
+  "version": "0.1.0",
+  "description": "Type checking for JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogroppo/isitnot.git"
+  },
+  "author": "Orlando Groppo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ogroppo/isitnot/issues"
+  },
+  "homepage": "https://github.com/ogroppo/isitnot#readme",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0"
+  }
+}
