@@ -12,8 +12,8 @@ describe("Test Generic utilities", function() {
 			expect(isEmpty({a:1})).to.equal(false);
 			expect(isEmpty([{}])).to.equal(false);
 			expect(isEmpty(0)).to.equal(false);
-			expect(isEmpty(null)).to.equal(false);
-			expect(isEmpty(undefined)).to.equal(false);
+			expect(isEmpty(null)).to.equal(true);
+			expect(isEmpty(undefined)).to.equal(true);
 			expect(isEmpty(()=>{})).to.equal(false);
 		});
     });

@@ -1,7 +1,36 @@
 # isitnot
-Type checking package for JavaScript
+Type checking package for JavaScript, include just once in your entrypoint like
+
+index.js
+
+require('isitnot');
+
 
 ## Available (global) functions
+
+### Strings
+
+~~~js
+isString('') //true
+
+isNotString(()=>{}) //true
+
+isStringAndNotEmpty('') //false
+
+isStringAndNotEmpty(' ') //false
+
+isStringAndNotEmpty('hey') //true
+
+isEmptyString({}) //false
+
+isEmptyString('') //true
+
+isNotEmptyString('') //false
+
+isEmail('a@b.c') //true
+
+isNotEmail('whatever@domain') //true
+~~~
 
 ### Arrays
 
@@ -31,23 +60,6 @@ isEmptyObject([]) //false
 isNotEmptyObject({a: 1}) //true
 ~~~
 
-### Strings
-
-~~~js
-isString('') //true
-
-isNotString(()=>{}) //true
-
-isEmptyString({}) //false
-
-isEmptyString('') //true
-
-isNotEmptyString('') //false
-
-isEmail('a@b.c') //true
-
-isNotEmail('whatever@domain') //true
-~~~
 
 ### Numbers
 
@@ -68,7 +80,15 @@ isEmpty([]) //true
 
 isEmpty('') //true
 
+isEmpty(' ') //true
+
 isEmpty({}) //true
+
+isEmpty(null) //true
+
+isEmpty(undefined) //true
+
+isEmpty(0) //false
 
 isNotEmpty('hey') //true
 ~~~

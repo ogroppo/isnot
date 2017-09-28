@@ -1,7 +1,7 @@
 {
   "name": "isitnot",
-  "version": "0.1.0",
-  "description": "Type checking for JavaScript",
+  "version": "1.0.2",
+  "description": "Intuitive type checking functions exposed globally",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha --reporter spec"
@@ -10,6 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/ogroppo/isitnot.git"
   },
+  "keywords": [
+    "global",
+    "type",
+    "test",
+    "bool",
+    "checking"
+  ],
   "author": "Orlando Groppo",
   "license": "ISC",
   "bugs": {

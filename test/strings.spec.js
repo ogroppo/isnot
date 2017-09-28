@@ -37,6 +37,16 @@ describe("Test Strings utilities", function() {
         expect(isEmptyString(000)).to.equal(false);
       });
     });
+    describe("isStringAndNotEmpty", function() {
+      it("checks correctly", function() {
+        expect(isStringAndNotEmpty('')).to.equal(false);
+        expect(isStringAndNotEmpty(' ')).to.equal(false);
+        expect(isStringAndNotEmpty('a')).to.equal(true);
+        expect(isStringAndNotEmpty([])).to.equal(false);
+        expect(isStringAndNotEmpty({})).to.equal(false);
+        expect(isStringAndNotEmpty(11)).to.equal(false);
+      });
+    });
     describe("isEmail", function() {
       it("checks correctly", function() {
         expect(isEmail('a@a.a')).to.equal(true);
