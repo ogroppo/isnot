@@ -1,6 +1,6 @@
 {
   "name": "isitnot",
-  "version": "1.0.2",
+  "version": "1.1.2",
   "description": "Intuitive type checking functions exposed globally",
   "main": "index.js",
   "scripts": {

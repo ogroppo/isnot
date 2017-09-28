@@ -92,3 +92,29 @@ isEmpty(0) //false
 
 isNotEmpty('hey') //true
 ~~~
+
+### Dates
+
+~~~js
+isDate('') //false
+
+isNotDate('') //true
+
+isDate(new Date()) //true
+
+isDate('1970-01-01T00:00:00.000Z') //true
+
+isDate('1970-01-01T00:00:00') //true
+
+isDate('1970-01-01T00:00') //true
+
+isDate('1970-01-01') //true
+
+isDate('0000-00-00') //false
+
+isDate('1970-13-01') //false (bad month)
+
+isDate('1970-01-32') //false (bad day)
+
+isDate('2017-02-29') //false (not leap year)
+~~~
