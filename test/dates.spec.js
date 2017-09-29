@@ -10,11 +10,9 @@ describe('Test Date utilities', () => {
 				false
 			));
 
-		it('correctly eveluates an instance of Date', () => {
-			runTest(new Date(), isDate, true);
-			runTest(new Date([1, 2, 3]), isDate, true); // -> actual result
+		it('correctly eveluates an instance of Date', () =>
 			// runTest(new Date([1, 2, 3]), isDate, false); -> in an ideal world
-		});
+			runTest([new Date(), new Date([1, 2, 3])], isDate, true));
 
 		it('detects an invalid instance of Date', () => {
 			runTest(
