@@ -10,7 +10,7 @@ describe('Test Date utilities', () => {
         false
       ));
 
-    it('correctly eveluates an instance of Date', () =>
+    it('correctly evaluates an instance of Date', () =>
       // runTest(new Date([1, 2, 3]), isDate, false); -> in an ideal world
       runTest([new Date(), new Date([1, 2, 3])], isDate, true));
 
@@ -34,7 +34,7 @@ describe('Test Date utilities', () => {
       );
     });
 
-    it('detects well formatted date strings (ISO format', () =>
+    it('detects well formatted date strings (ISO format)', () =>
       runTest(
         [
           '1970-01-01',
@@ -49,7 +49,7 @@ describe('Test Date utilities', () => {
         true
       ));
 
-    it('detects wrong date strings', () =>
+    it('detects invalid date strings', () =>
       runTest(
         [
           '1970-13-01',
