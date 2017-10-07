@@ -30,6 +30,17 @@ isNotEmptyString('') //false
 isEmail('a@b.c') //true
 
 isNotEmail('whatever@domain') //true
+
+isVariableName('var') //true (technically not, but it can be a property of an object accessed without ['...'])
+
+isVariableName('oh dear') //false
+
+isVariableName('0rel') //false cannot start with number
+
+isVariableName('var0') //true
+
+isNotVariableName('a@a') //true
+
 ~~~
 
 ### Arrays

@@ -66,4 +66,19 @@ describe("Test Strings utilities", function() {
         expect(isEmail(000)).to.equal(false);
       });
     });
+    describe("isVariableName", function() {
+      it("checks correctly", function() {
+        expect(isVariableName('a@a.a')).to.equal(false);
+        expect(isVariableName('')).to.equal(false);
+        expect(isVariableName(' ')).to.equal(false);
+        expect(isVariableName(' a')).to.equal(false);
+        expect(isVariableName('0var')).to.equal(false);
+        expect(isVariableName('myVar')).to.equal(true);
+        expect(isVariableName('var')).to.equal(true);
+        expect(isVariableName('const')).to.equal(true);
+        expect(isVariableName('let')).to.equal(true);
+        expect(isVariableName('let_let')).to.equal(true);
+        expect(isVariableName('let let')).to.equal(false);
+      });
+    });
 });

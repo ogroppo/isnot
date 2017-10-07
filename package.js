@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Complete javascript type checking with intuitive global variables',
-  version: '1.1.2',
+  version: '1.2.2',
   name: 'onestone:isitnot',
   git: 'https://github.com/ogroppo/isitnot.git'
 });
@@ -34,6 +34,8 @@ Package.onUse(function(api) {
       'isNotEmptyString',
       'isEmail',
       'isNotEmail'
+      'isVariableName'
+      'isNotVariableName'
     ],
     ['client', 'server']
   );
