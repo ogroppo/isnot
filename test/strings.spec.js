@@ -1,5 +1,15 @@
 var expect = require("chai").expect;
-require("../lib/strings");
+const {
+    isString,
+    isNotString,
+    isStringAndNotEmpty,
+    isEmptyString,
+    isNotEmptyString,
+    isEmail,
+    isNotEmail,
+    isVariableName,
+    isNotVariableName
+} = require("../lib/strings");
 
 describe("Test Strings utilities", function() {
     describe("isString", function() {

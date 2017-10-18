@@ -1,5 +1,7 @@
 var expect = require("chai").expect;
-require("../lib/numbers");
+const {isInt, isNotInt, isNumber, isNotNumber} = require("../lib/numbers");
+
+
 
 describe("Test Numbers utilities", function() {
     describe("isNumber", function() {

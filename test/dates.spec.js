@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-require('../lib/dates');
+const {isDate, isNotdate} = require('../lib/dates');
 
 describe('Test Date utilities', () => {
   describe('isDate', () => {

@@ -1,5 +1,5 @@
 var expect = require("chai").expect;
-require("../lib/objects");
+const {isObject, isEmptyObject} = require("../lib/objects");
 
 describe("Test Object utilities", function() {
     describe("isObject", function() {

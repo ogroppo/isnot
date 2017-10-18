@@ -1,28 +1,24 @@
 {
-  "name": "isitnot",
-  "version": "1.2.2",
-  "description": "Intuitive type checking functions exposed globally",
+  "name": "isnot",
+  "version": "0.1.0",
+  "description": "All imaginable type checking utils with negation",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ogroppo/isitnot.git"
+    "url": "git+https://github.com/ogroppo/isnot.git"
   },
   "keywords": [
-    "global",
     "type",
     "test",
     "bool",
-    "checking"
+    "checking",
+    "not"
   ],
   "author": "Orlando Groppo",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ogroppo/isitnot/issues"
-  },
-  "homepage": "https://github.com/ogroppo/isitnot#readme",
   "devDependencies": {
     "chai": "^4.1.1",
     "mocha": "^3.5.0"

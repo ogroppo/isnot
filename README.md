@@ -1,12 +1,11 @@
-# isitnot
+# isnot
+
 Type checking package for JavaScript, include just once in your entrypoint like
 
-index.js
-
-require('isitnot');
+you need to fetch every single function like const {isString} = require('isnot');
 
 
-## Available (global) functions
+## Available functions
 
 ### Strings
 
@@ -71,7 +70,6 @@ isEmptyObject([]) //false
 isNotEmptyObject({a: 1}) //true
 ~~~
 
-
 ### Numbers
 
 ~~~js
@@ -82,6 +80,18 @@ isNotNumber(NaN) //true
 isInt(0) //true
 
 isNotInt(1.2) //true
+~~~
+
+### Bool
+
+~~~js
+isBool(1) //false
+
+isNotBool(NaN) //true
+
+isBool(0) //false
+
+isBool(true) //true
 ~~~
 
 ### Generic

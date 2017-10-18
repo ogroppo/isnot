@@ -1,5 +1,5 @@
 var expect = require("chai").expect;
-require("../lib/generic");
+const {isEmpty} = require("../lib/generic");
 
 describe("Test Generic utilities", function() {
     describe("isEmpty", function() {

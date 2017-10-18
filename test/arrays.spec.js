@@ -1,5 +1,5 @@
 var expect = require("chai").expect;
-require("../lib/arrays");
+const {isArray, isEmptyArray} = require("../lib/arrays");
 
 describe("Test Arrays utilities", function() {
     describe("isArray", function() {
