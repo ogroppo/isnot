@@ -8,7 +8,9 @@ const {
     isEmail,
     isNotEmail,
     isVariableName,
-    isNotVariableName
+    isNotVariableName,
+    isURL,
+    isNotURL
 } = require("../lib/strings");
 
 describe("Test Strings utilities", function() {
@@ -79,7 +81,9 @@ describe("Test Strings utilities", function() {
     describe("isVariableName", function() {
       it("checks correctly", function() {
         expect(isVariableName('a@a.a')).to.equal(false);
-        expect(isVariableName('')).to.equal(false);
+        expect(isVariableName(undefined)).to.equal(false);
+        expect(isVariableName(null)).to.equal(false);
+        expect(isVariableName(' ')).to.equal(false);
         expect(isVariableName(' ')).to.equal(false);
         expect(isVariableName(' a')).to.equal(false);
         expect(isVariableName('0var')).to.equal(false);
@@ -89,6 +93,21 @@ describe("Test Strings utilities", function() {
         expect(isVariableName('let')).to.equal(true);
         expect(isVariableName('let_let')).to.equal(true);
         expect(isVariableName('let let')).to.equal(false);
+      });
+    });
+
+    describe("isURL", function() {
+      it("checks correctly", function() {
+        expect(isURL('a@a.a')).to.equal(false);
+        expect(isURL('')).to.equal(false);
+        expect(isURL(' ')).to.equal(false);
+        expect(isURL(undefined)).to.equal(false);
+        expect(isURL(null)).to.equal(false);
+        expect(isURL('localhost')).to.equal(true);
+        expect(isURL('http://localhost')).to.equal(true);
+        expect(isURL('https://localhost')).to.equal(true);
+        expect(isURL('//localhost')).to.equal(false);
+        expect(isURL('bim.bam')).to.equal(true);
       });
     });
 });

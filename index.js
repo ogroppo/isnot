@@ -1,7 +1,9 @@
-Object.assign(module.exports, require('./lib/arrays.js'));
-Object.assign(module.exports, require('./lib/bool.js'));
-Object.assign(module.exports, require('./lib/dates.js'));
-Object.assign(module.exports, require('./lib/generic.js'));
-Object.assign(module.exports, require('./lib/numbers.js'));
-Object.assign(module.exports, require('./lib/objects.js'));
-Object.assign(module.exports, require('./lib/strings.js'));
+Object.assign(module.exports, require('./lib/arrays'));
+Object.assign(module.exports, require('./lib/bool'));
+Object.assign(module.exports, require('./lib/dates'));
+Object.assign(module.exports, require('./lib/function'));
+Object.assign(module.exports, require('./lib/generic'));
+Object.assign(module.exports, require('./lib/numbers'));
+Object.assign(module.exports, require('./lib/objects'));
+Object.assign(module.exports, require('./lib/strings'));
+Object.assign(module.exports, require('./lib/undefined'));

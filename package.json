@@ -1,6 +1,6 @@
 {
   "name": "isnot",
-  "version": "0.1.0",
+  "version": "0.3.1",
   "description": "All imaginable type checking utils with negation",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,8 @@
     "test",
     "bool",
     "checking",
-    "not"
+    "not",
+    "undefined"
   ],
   "author": "Orlando Groppo",
   "license": "ISC",

@@ -139,3 +139,17 @@ isDate('1970-01-32') //false (bad day)
 
 isDate('2017-02-29') //false (not leap year)
 ~~~
+
+### undefined
+
+~~~js
+isUndefined('') //false
+
+isUndefined(false) //false
+
+isUndefined(undefined) //true
+
+isUndefined(typeof undefined) //false
+
+isUndefined({}.inventedProp) //true
+~~~
