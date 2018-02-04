@@ -1,5 +1,5 @@
 var expect = require("chai").expect;
-const {isInt, isNotInt, isNumber, isNotNumber} = require("../lib/numbers");
+const {isInt, isNotInt, isNumber, isNotNumber, isOdd, isEven} = require("../lib/numbers");
 
 
 
@@ -26,6 +26,12 @@ describe("Test Numbers utilities", function() {
         expect(isNumber(2e12)).to.equal(true);
       });
     });
+    describe("isNotNumber", function() {
+      it("checks correctly", function() {
+        expect(isNotNumber('string')).to.equal(true);
+        expect(isNotNumber(1)).to.equal(false);
+      });
+    });
     describe("isInt", function() {
       it("checks correctly", function() {
         expect(isInt('string')).to.equal(false);
@@ -47,6 +53,30 @@ describe("Test Numbers utilities", function() {
         expect(isInt(-1244)).to.equal(true);
         expect(isInt(2e12)).to.equal(true);
         expect(isInt(2.44e1)).to.equal(false);
+      });
+    });
+    describe("isNotInt", function() {
+      it("checks correctly", function() {
+        expect(isNotInt('string')).to.equal(true);
+        expect(isNotInt(1.1)).to.equal(true);
+        expect(isNotInt(1)).to.equal(false);
+      });
+    });
+    describe("isOdd", function() {
+      it("checks correctly", function() {
+        expect(isOdd('string')).to.equal(false);
+        expect(isOdd(1)).to.equal(true);
+        expect(isOdd(1.1)).to.equal(false);
+        expect(isOdd(-1-2)).to.equal(true);
+      });
+    });
+    describe("isEven", function() {
+      it("checks correctly", function() {
+        expect(isEven('string')).to.equal(false);
+        expect(isEven(1)).to.equal(false);
+        expect(isEven(0)).to.equal(true);
+        expect(isEven(Infinity)).to.equal(false);
+        expect(isEven(-0)).to.equal(true);
       });
     });
 });

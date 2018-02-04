@@ -51,9 +51,13 @@ isArray({}) // false
 
 isEmptyArray([]) // true
 
-isEmptyArray(['1']) // false
+isEmptyArray({}) // false
 
 isNotEmptyArray([]) // false
+
+isNotEmptyArray([1]) // true
+
+isNotEmptyArray({}) // false
 ~~~
 
 ### Objects
