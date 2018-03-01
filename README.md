@@ -1,34 +1,127 @@
 # isnot
 
-Type checking package for JavaScript, include just once in your entrypoint like
+Beautifully documented type checking package for JavaScript.
 
-you need to fetch every single function like const {isString} = require('isnot');
+## Usage
 
+To use the functions just do:
 
-## Available functions
+` var {isString, isArray} = require('isnot'); `
 
-### Strings
+## TOC
+
+* [Strings](#Strings)
+	* [String](#String)
+		* [isString](#isString)
+		* [isNotString](#isNotString)
+	* [Empty String](#Empty String)
+		* [isEmptyString](#isEmptyString)
+		* [isNotEmptyString](#isNotEmptyString)
+	* [Name](#Name)
+		* [isName](#isName)
+		* [isNotName](#isNotName)
+	* [Email](#Email)
+		* [isEmail](#isEmail)
+		* [isNotEmail](#isNotEmail)
+	* [Variable Name](#Variable Name)
+		* [isVariableName](#isVariableName)
+		* [isNotVariableName](#isNotVariableName)
+	* [URL](#URL)
+		* [isURL](#isURL)
+		* [isNotURL](#isNotURL)
+	* [ISO Date](#ISO Date)
+		* [isISODate](#isISODate)
+		* [isNotISODate](#isNotISODate)
+* [Arrays](#Arrays)
+	* [Array](#Array)
+
+### Strings <a name="Strings"></a>
+
+#### String <a name="String"></a>
+
+Corresponds to the js string primitive
+
+###### isString <a name="isString"></a>
 
 ~~~js
 isString('') //true
+~~~
 
+###### isNotString <a name="isNotString"></a>
+~~~js
 isNotString(()=>{}) //true
+~~~
 
-isStringAndNotEmpty('') //false
+#### Empty String <a name="Empty String"></a>
 
-isStringAndNotEmpty(' ') //false
+An empty string is only `''`
 
-isStringAndNotEmpty('hey') //true
+###### isEmptyString <a name="isEmptyString"></a>
 
+Purely checks if the string is empty
+
+~~~js
 isEmptyString({}) //false
 
 isEmptyString('') //true
 
+isEmptyString(' ') //false
+
+~~~
+
+###### isEmptyString <a name="isEmptyString"></a>
+~~~js
 isNotEmptyString('') //false
+~~~
 
+#### Name <a name="Name"></a>
+
+A name is a string that is just not empty space.
+
+###### isName <a name="isName"></a>
+~~~js
+isName('') //false
+
+isName(' ') //false
+
+isName('\r') //false
+
+isName(123) //false
+
+isName('hey') //true
+~~~
+
+###### isNotName <a name="isNotName"></a>
+~~~js
+isNotName('') //true
+
+isNotName(' ') //true
+
+isNotName('\n') //true
+
+isNotName([]) //true
+
+isNotName({}.toString()) //false
+~~~
+
+#### Email <a name="Email"></a>
+
+###### isEmail <a name="isEmail"></a>
+~~~js
 isEmail('a@b.c') //true
+~~~
 
-isNotEmail('whatever@domain') //true
+###### isNotEmail <a name="isNotEmail"></a>
+~~~js
+isNotEmail('missing@dot') //true
+
+isNotEmail('missing.domain') //true
+~~~
+
+#### Variable Name <a name="Variable Name"></a>
+
+###### isVariableName <a name="isVariableName"></a>
+~~~js
 
 isVariableName('var') //true (technically not, but it can be a property of an object accessed without ['...'])
 
@@ -37,12 +130,56 @@ isVariableName('oh dear') //false
 isVariableName('0rel') //false cannot start with number
 
 isVariableName('var0') //true
-
-isNotVariableName('a@a') //true
-
 ~~~
 
-### Arrays
+###### isNotVariableName <a name="isNotVariableName"></a>
+~~~js
+isNotVariableName('a@a') //true
+
+isNotVariableName('--var--') //true
+~~~
+
+#### URL <a name="URL"></a>
+
+###### isURL <a name="isURL"></a>
+~~~js
+isURL('https://localhost') //true
+
+isURL('www.site.com') //true
+~~~
+
+###### isNotURL <a name="isNotURL"></a>
+~~~js
+isNotURL('a@a') //true
+
+isNotURL('site.com') //false
+~~~
+
+#### ISO String <a name="ISO String"></a>
+
+###### isISOString <a name="isISOString"></a>
+~~~js
+isISOString(new Date().toISOString()) //true
+
+isISOString('2017-06-01T18:43:26.000-02:00') //true
+
+isISOString('2017-06-01T18:43:26.000Z') //true
+~~~
+
+###### isNotISOString <a name="isNotISOString"></a>
+~~~js
+isNotISOString('2017-06-01') //true
+
+isNotISOString('2017/06/01') //true
+
+isNotISOString('2017/06/01T18:43:26.000-02:00') //true
+
+isNotISOString(new Date().toString()) //true
+~~~
+
+### Arrays <a name="Arrays"></a>
+
+#### Array <a name="Array"></a>
 
 ~~~js
 isArray([]) // true
