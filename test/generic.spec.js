@@ -1,11 +1,10 @@
-var expect = require("chai").expect;
+const expect = require("chai").expect;
 const {isEmpty} = require("../lib/generic");
 
 describe("Test Generic utilities", function() {
-    describe("isEmpty", function() {
+  describe("isEmpty", function() {
 		it("checks correctly", function() {
 			expect(isEmpty('')).to.equal(true);
-			expect(isEmpty(' ')).to.equal(true);
 			expect(isEmpty([])).to.equal(true);
 			expect(isEmpty({})).to.equal(true);
 			expect(isEmpty([1,2,3])).to.equal(false);
@@ -16,5 +15,5 @@ describe("Test Generic utilities", function() {
 			expect(isEmpty(undefined)).to.equal(true);
 			expect(isEmpty(()=>{})).to.equal(false);
 		});
-    });
+  });
 });

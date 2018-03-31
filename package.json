@@ -12,17 +12,18 @@
   },
   "keywords": [
     "type",
-		"javascript type check"
+		"javascript type check",
     "test",
     "bool",
     "checking",
     "not",
     "undefined",
 		"null",
-		"numbers",
-		"strings",
-		"objects",
-		"arrays"
+		"number",
+		"string",
+		"object",
+		"array",
+		"date"
   ],
   "author": "Orlando Groppo <orlando.groppo@gmail.com>",
   "license": "UNLICENCED",
