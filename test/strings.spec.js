@@ -13,7 +13,9 @@ const {
     isURL,
     isNotURL,
     isISOString,
-    isNotISOString
+    isNotISOString,
+    isUUID,
+    isNotUUID
 } = require("../lib/strings");
 
 describe("Test Strings utilities", function() {
@@ -168,6 +170,18 @@ describe("Test Strings utilities", function() {
         expect(isNotISOString(undefined)).to.equal(true);
         expect(isNotISOString('a@a.a')).to.equal(true);
         expect(isNotISOString(new Date().toString())).to.equal(true);
+      });
+    });
+
+    describe("isUUID", function() {
+      it("checks correctly", function() {
+        expect(isUUID('416ac246-e7ac-49ff-93b4-f7e94d997e6b')).to.equal(true);
+      });
+    });
+    describe("isNotUUID", function() {
+      it("checks correctly", function() {
+        expect(isNotUUID(undefined)).to.equal(true);
+        expect(isNotUUID('1234-1234-1234')).to.equal(true);
       });
     });
 });

@@ -1,6 +1,6 @@
 {
   "name": "isnot",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "All imaginable type checking utils with negation",
   "main": "index.js",
   "scripts": {
@@ -12,14 +12,20 @@
   },
   "keywords": [
     "type",
+		"javascript type check"
     "test",
     "bool",
     "checking",
     "not",
-    "undefined"
+    "undefined",
+		"null",
+		"numbers",
+		"strings",
+		"objects",
+		"arrays"
   ],
-  "author": "Orlando Groppo",
-  "license": "ISC",
+  "author": "Orlando Groppo <orlando.groppo@gmail.com>",
+  "license": "UNLICENCED",
   "devDependencies": {
     "chai": "^4.1.1",
     "mocha": "^3.5.0"

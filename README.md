@@ -14,7 +14,7 @@ To use the functions just do:
 	* [String](#String)
 		* [isString](#isString)
 		* [isNotString](#isNotString)
-	* [Empty String](#Empty String)
+	* [Empty String](#EmptyString)
 		* [isEmptyString](#isEmptyString)
 		* [isNotEmptyString](#isNotEmptyString)
 	* [Name](#Name)
@@ -23,15 +23,18 @@ To use the functions just do:
 	* [Email](#Email)
 		* [isEmail](#isEmail)
 		* [isNotEmail](#isNotEmail)
-	* [Variable Name](#Variable Name)
+	* [Variable Name](#VariableName)
 		* [isVariableName](#isVariableName)
 		* [isNotVariableName](#isNotVariableName)
 	* [URL](#URL)
 		* [isURL](#isURL)
 		* [isNotURL](#isNotURL)
-	* [ISO Date](#ISO Date)
+	* [ISO Date](#ISODate)
 		* [isISODate](#isISODate)
 		* [isNotISODate](#isNotISODate)
+	* [UUID](#UUID)
+		* [isUUID](#isUUID)
+		* [isNotUUID](#isNotUUID)
 * [Arrays](#Arrays)
 	* [Array](#Array)
 
@@ -52,7 +55,7 @@ isString('') //true
 isNotString(()=>{}) //true
 ~~~
 
-#### Empty String <a name="Empty String"></a>
+#### Empty String <a name="EmptyString"></a>
 
 An empty string is only `''`
 
@@ -118,7 +121,7 @@ isNotEmail('missing@dot') //true
 isNotEmail('missing.domain') //true
 ~~~
 
-#### Variable Name <a name="Variable Name"></a>
+#### Variable Name <a name="VariableName"></a>
 
 ###### isVariableName <a name="isVariableName"></a>
 ~~~js
@@ -155,7 +158,10 @@ isNotURL('a@a') //true
 isNotURL('site.com') //false
 ~~~
 
-#### ISO String <a name="ISO String"></a>
+#### ISO String <a name="ISOString"></a>
+
+Checks only if string it's in a ISO format, not if the date is actually a valid date.
+Useful to check date properties stored in a database.
 
 ###### isISOString <a name="isISOString"></a>
 ~~~js
@@ -175,6 +181,30 @@ isNotISOString('2017/06/01') //true
 isNotISOString('2017/06/01T18:43:26.000-02:00') //true
 
 isNotISOString(new Date().toString()) //true
+~~~
+
+#### UUID <a name="UUID"></a>
+
+Tests any version of UUID from 1 to 5.
+
+###### isUUID <a name="isUUID"></a>
+~~~js
+isUUID(uuidv1()) //true
+
+isUUID(uuidv2()) //true
+
+isUUID(uuidv3()) //true
+
+isUUID(uuidv4()) //true
+
+isUUID(uuidv5()) //true
+
+isUUID('5a2de30a-a736-5aea-8f7f-ad0f019cdc00') //true
+~~~
+
+###### isNotUUID <a name="isNotUUID"></a>
+~~~js
+isNotUUID('2017-06-01') //true
 ~~~
 
 ### Arrays <a name="Arrays"></a>
