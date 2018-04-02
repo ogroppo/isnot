@@ -1,6 +1,6 @@
 {
   "name": "isnot",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "All imaginable type checking utils with negation",
   "main": "index.js",
   "scripts": {

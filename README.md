@@ -227,17 +227,33 @@ isNotEmptyArray([1]) // true
 isNotEmptyArray({}) // false
 ~~~
 
-### Objects
+### <a name="Objects"></a> Objects
+
+#### <a name="Object"></a> Object
+
+###### <a name="isObject"></a> isObject()
 
 ~~~js
 isObject([]) // FALSE, arrays are not objects for this library
 
 isObject({}) // true
+~~~
 
+###### <a name="isNotObject"></a> isNotObject()
+
+~~~js
 isNotObject('') //true
+~~~
 
-isEmptyObject([]) //false
+###### <a name="isEmptyObject"></a> isEmptyObject()
 
+~~~js
+isEmptyObject({}) //true
+~~~
+
+###### <a name="isNotEmptyObject"></a> isNotEmptyObject()
+
+~~~js
 isNotEmptyObject({a: 1}) //true
 ~~~
 
