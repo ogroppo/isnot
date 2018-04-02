@@ -6,9 +6,9 @@ Beautifully documented type checking package for JavaScript.
 
 To use the functions just do:
 
-` var {isString, isArray} = require('isnot'); `
+` const {isString, isArray} = require('isnot'); `
 
-## TOC
+## Functions
 
 * [Strings](#Strings)
 	* [String](#String)
@@ -29,9 +29,9 @@ To use the functions just do:
 	* [URL](#URL)
 		* [isURL](#isURL)
 		* [isNotURL](#isNotURL)
-	* [ISO Date](#ISODate)
-		* [isISODate](#isISODate)
-		* [isNotISODate](#isNotISODate)
+	* [ISO String (Date)](#ISODate)
+		* [isISOString](#isISOString)
+		* [isNotISOString](#isNotISOString)
 	* [UUID](#UUID)
 		* [isUUID](#isUUID)
 		* [isNotUUID](#isNotUUID)
