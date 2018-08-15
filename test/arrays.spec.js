@@ -1,5 +1,5 @@
 var expect = require("chai").expect;
-const {isArray, isEmptyArray, isNotEmptyArray} = require("../lib/arrays");
+const {isArray, isEmptyArray, isNotEmptyArray, isArrayOfNames} = require("../lib/arrays");
 
 describe("Test Arrays utilities", function() {
     describe("isArray", function() {
@@ -36,6 +36,24 @@ describe("Test Arrays utilities", function() {
 				expect(isNotEmptyArray(null)).to.equal(false);
 				expect(isNotEmptyArray(undefined)).to.equal(false);
 				expect(isNotEmptyArray(()=>{})).to.equal(false);
+			});
+    });
+    describe("isArrayOfNames", function() {
+			it("checks correctly", function() {
+        expect(isArrayOfNames(['1','2','3'])).to.equal(true);
+        expect(isArrayOfNames(['?!""'])).to.equal(true);
+
+        expect(isArrayOfNames(['','2','3'])).to.equal(false);
+        expect(isArrayOfNames(['1',' ','3'])).to.equal(false);
+				expect(isArrayOfNames(['', ' '])).to.equal(false);
+				expect(isArrayOfNames([''])).to.equal(false);
+				expect(isArrayOfNames([])).to.equal(false);
+				expect(isArrayOfNames([1,2,3])).to.equal(false);
+				expect(isArrayOfNames({})).to.equal(false);
+				expect(isArrayOfNames([{}])).to.equal(false);
+				expect(isArrayOfNames(null)).to.equal(false);
+				expect(isArrayOfNames(undefined)).to.equal(false);
+				expect(isArrayOfNames(()=>{})).to.equal(false);
 			});
     });
 });

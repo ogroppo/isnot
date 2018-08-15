@@ -1,6 +1,6 @@
 {
   "name": "isnot",
-  "version": "0.8.1",
+  "version": "0.9.0",
   "description": "All imaginable type checking utils with negation",
   "main": "index.js",
   "scripts": {
@@ -12,18 +12,18 @@
   },
   "keywords": [
     "type",
-		"javascript type check",
+    "javascript type check",
     "test",
     "bool",
     "checking",
     "not",
     "undefined",
-		"null",
-		"number",
-		"string",
-		"object",
-		"array",
-		"date"
+    "null",
+    "number",
+    "string",
+    "object",
+    "array",
+    "date"
   ],
   "author": "Orlando Groppo <orlando.groppo@gmail.com>",
   "license": "UNLICENCED",
