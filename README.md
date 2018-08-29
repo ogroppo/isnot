@@ -209,13 +209,21 @@ isNotUUID('2017-06-01') //true
 
 ### Arrays <a name="Arrays"></a>
 
-#### Array <a name="Array"></a>
+#### isArray/isNotArray <a name="Array"></a>
 
-~~~js
+```js
 isArray([]) // true
 
 isArray({}) // false
 
+isNotArray() // true
+
+isNotArray(['hey']) // false
+```
+
+#### isEmptyArray/isNotEmptyArray <a name="EmptyArray"></a>
+
+```js
 isEmptyArray([]) // true
 
 isEmptyArray({}) // false
@@ -225,7 +233,17 @@ isNotEmptyArray([]) // false
 isNotEmptyArray([1]) // true
 
 isNotEmptyArray({}) // false
-~~~
+```
+
+#### isArrayOfNames <a name="ArrayOfNames"></a>
+
+```js
+isArrayOfNames([]) // false
+
+isArrayOfNames([' ', '']) // false
+
+isArrayOfNames(['1', 'foo']) // true
+```
 
 ### <a name="Objects"></a> Objects
 
