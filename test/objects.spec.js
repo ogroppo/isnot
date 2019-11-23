@@ -17,6 +17,9 @@ describe("Test Object utilities", function() {
 			expect(isObject(null)).to.equal(false);
 			expect(isObject(undefined)).to.equal(false);
 			expect(isObject(Infinity)).to.equal(false);
+			expect(isObject(Date)).to.equal(false);
+			expect(isObject(new Date())).to.equal(false);
+			expect(isObject(Symbol('lol'))).to.equal(false);
 		});
   });
   describe("isNotObject", function() {

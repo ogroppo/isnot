@@ -4,9 +4,13 @@ Beautifully documented type checking package for JavaScript.
 
 ## Usage
 
-To use the functions just do:
+Use any of the functions as named exports:
 
-` const {isString, isArray} = require('isnot'); `
+```
+const {isString, isArray} = require('isnot')
+//or
+import {isObject} from 'isnot'
+```
 
 ## Functions
 
@@ -37,6 +41,19 @@ To use the functions just do:
 		* [isNotUUID](#isNotUUID)
 * [Arrays](#Arrays)
 	* [Array](#Array)
+    * [isArray](#isArray)
+    * [isNotArray](#isNotArray)
+    * [isArrayOfNames](#isArrayOfNames)
+  * [Empty Array](#EmptyArray)
+    * [isEmptyArray](#isEmptyArray)
+    * [isNotEmptyArray](#isNotEmptyArray)
+* [Objects](#Objects)
+	* [Object](#Object)
+    * [isObject](#isObject)
+    * [isNotObject](#isNotObject)
+  * [Empty Object](#EmptyObject)
+    * [isEmptyObject](#isEmptyObject)
+    * [isNotEmptyObject](#isNotEmptyArray)
 
 ### Strings <a name="Strings"></a>
 
