@@ -1,6 +1,6 @@
 {
   "name": "isnot",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "All imaginable type checking utils with their negation",
   "main": "./dist/index.js",
   "browser": "./lib/index.js",
