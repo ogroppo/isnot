@@ -49,6 +49,9 @@ import {isObject} from 'isnot'
   - [Empty Array](#EmptyArray)
     - [isEmptyArray](#isEmptyArray)
     - [isNotEmptyArray](#isNotEmptyArray)
+- [Boolean](#Boolean)
+  - [isBoolean](#isBoolean)
+  - [isNotBoolean](#isNotBoolean)
 - [Objects](#Objects)
   - [Object](#Object)
     - [isObject](#isObject)
@@ -318,16 +321,20 @@ isInt(0); //true
 isNotInt(1.2); //true
 ```
 
-### Bool
+### Boolean
+
+###### isBoolean
 
 ```js
-isBool(1); //false
+isBoolean(1); //false
+isBoolean(0); //false
+```
 
-isNotBool(NaN); //true
+###### isNotBoolean
 
-isBool(0); //false
-
-isBool(true); //true
+```
+isNotBoolean(NaN); //true
+isNotBoolean(true); //true
 ```
 
 ### Generic

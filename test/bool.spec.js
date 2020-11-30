@@ -1,30 +1,30 @@
 var expect = require("chai").expect;
-const { isBool, isNotBool } = require("../src/bool");
+import { isBoolean, isNotBoolean } from "../src/bool";
 
 describe("Test Bool utilities", function () {
-  describe("isBool", function () {
+  describe("isBoolean", function () {
     it("checks valid", function () {
-      expect(isBool(true)).to.equal(true);
-      expect(isBool(false)).to.equal(true);
-      expect(isBool(new Boolean())).to.equal(true);
-      expect(isBool(new Boolean(1))).to.equal(true);
-      expect(isBool(new Boolean(""))).to.equal(true);
-      expect(isBool(Boolean())).to.equal(true);
+      expect(isBoolean(true)).to.equal(true);
+      expect(isBoolean(false)).to.equal(true);
+      expect(isBoolean(new Boolean())).to.equal(true);
+      expect(isBoolean(new Boolean(1))).to.equal(true);
+      expect(isBoolean(new Boolean(""))).to.equal(true);
+      expect(isBoolean(Boolean())).to.equal(true);
     });
     it("checks invalid", function () {
-      expect(isBool("")).to.equal(false);
-      expect(isBool({})).to.equal(false);
-      expect(isBool(null)).to.equal(false);
-      expect(isBool(1)).to.equal(false);
-      expect(isBool(Boolean)).to.equal(false); //function
+      expect(isBoolean("")).to.equal(false);
+      expect(isBoolean({})).to.equal(false);
+      expect(isBoolean(null)).to.equal(false);
+      expect(isBoolean(1)).to.equal(false);
+      expect(isBoolean(Boolean)).to.equal(false); //function
     });
   });
-  describe("isNotBool", function () {
+  describe("isNotBoolean", function () {
     it("checks valid", function () {
-      expect(isNotBool("")).to.equal(true);
+      expect(isNotBoolean("")).to.equal(true);
     });
     it("checks invalid", function () {
-      expect(isNotBool(false)).to.equal(false);
+      expect(isNotBoolean(false)).to.equal(false);
     });
   });
 });
