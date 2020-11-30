@@ -1,9 +1,0 @@
-Object.assign(module.exports, require('./lib/arrays'));
-Object.assign(module.exports, require('./lib/bool'));
-Object.assign(module.exports, require('./lib/dates'));
-Object.assign(module.exports, require('./lib/function'));
-Object.assign(module.exports, require('./lib/generic'));
-Object.assign(module.exports, require('./lib/numbers'));
-Object.assign(module.exports, require('./lib/objects'));
-Object.assign(module.exports, require('./lib/strings'));
-Object.assign(module.exports, require('./lib/undefined'));
